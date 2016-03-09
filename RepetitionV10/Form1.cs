@@ -35,7 +35,6 @@ namespace RepetitionV10
 
             tbxFaktura.Text += kostnadExklMoms;
 
-
         }
     }
 }

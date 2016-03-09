@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkRabatt = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tbxKund
@@ -106,23 +106,23 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Timpenning";
             // 
-            // checkBox1
+            // checkRabatt
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 235);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(97, 17);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Rabatt (100 kr)";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkRabatt.AutoSize = true;
+            this.checkRabatt.Location = new System.Drawing.Point(16, 235);
+            this.checkRabatt.Name = "checkRabatt";
+            this.checkRabatt.Size = new System.Drawing.Size(97, 17);
+            this.checkRabatt.TabIndex = 8;
+            this.checkRabatt.Text = "Rabatt (100 kr)";
+            this.checkRabatt.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(190)))), ((int)(((byte)(180)))));
             this.ClientSize = new System.Drawing.Size(531, 456);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkRabatt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -148,7 +148,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkRabatt;
     }
 }
 
