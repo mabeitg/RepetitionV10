@@ -19,21 +19,37 @@ namespace RepetitionV10
 
         private void btnSkapaFaktura_Click(object sender, EventArgs e)
         {
-            tbxFaktura.Text = "Faktura till " + tbxKund.Text;
+            if (tbxKund.Text != "" && tbxTimmar.Text != "" && tbxTimpenning.Text != "")
+            {
+                tbxFaktura.Text = "Faktura till " + tbxKund.Text;
 
-            tbxFaktura.Text += "\r\n"; //Ny rad
-            tbxFaktura.Text += "\r\n"; //Ny rad
+                tbxFaktura.Text += "\r\n"; //Ny rad
+                tbxFaktura.Text += "\r\n"; //Ny rad
 
-            tbxFaktura.Text += tbxTimmar.Text
-                + " timmar a " + tbxTimpenning.Text + " kr: ";
+                tbxFaktura.Text += tbxTimmar.Text
+                    + " timmar a " + tbxTimpenning.Text + " kr: ";
 
-            int timmar, timpenning, kostnadExklMoms;
+                int timmar, timpenning, kostnadExklMoms;
 
-            timmar = int.Parse(tbxTimmar.Text); //Konverterar string till int
-            timpenning = int.Parse(tbxTimpenning.Text);
-            kostnadExklMoms = timmar * timpenning;
+                timmar = int.Parse(tbxTimmar.Text); //Konverterar string till int
+                timpenning = int.Parse(tbxTimpenning.Text);
+                kostnadExklMoms = timmar * timpenning;
 
-            tbxFaktura.Text += kostnadExklMoms;
+                tbxFaktura.Text += kostnadExklMoms;
+
+                double moms, kostnadInklMoms;
+
+                moms = kostnadExklMoms * 0.25;
+                kostnadInklMoms = kostnadExklMoms + moms;
+
+                tbxFaktura.Text += "\r\n";
+                tbxFaktura.Text += "Moms (25 %): " + moms + " kr";
+                tbxFaktura.Text += "\r\n";
+                tbxFaktura.Text += "Att betala: " + kostnadInklMoms;
+            }
+            else //Om inte alla fält är ifyllda
+                MessageBox.Show("Fyll i alla fält!");
+
 
         }
     }
