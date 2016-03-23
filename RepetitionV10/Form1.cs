@@ -51,8 +51,18 @@ namespace RepetitionV10
                 moms = kostnadExklMoms * 0.25;
                 kostnadInklMoms = kostnadExklMoms + moms;
 
+
+
                 tbxFaktura.Text += "\r\n";
                 tbxFaktura.Text += "Moms (25 %): " + moms + " kr";
+
+                //Rabatt
+                if(checkRabatt.Checked==true)
+                {
+                    kostnadInklMoms -= 100;
+                    tbxFaktura.Text += "Rabatt: 100 kr";
+                }
+
                 tbxFaktura.Text += "\r\n";
                 tbxFaktura.Text += "Att betala: " + kostnadInklMoms;
             }
