@@ -33,7 +33,16 @@ namespace RepetitionV10
 
                 timmar = int.Parse(tbxTimmar.Text); //Konverterar string till int
                 timpenning = int.Parse(tbxTimpenning.Text);
-                kostnadExklMoms = timmar * timpenning;
+                //                kostnadExklMoms = timmar * timpenning;
+
+                int i = 0; //i får hålla koll på antalet iterationer/"rundor"/"varv"
+                kostnadExklMoms = 0;
+
+                while (i < timmar)
+                {
+                    kostnadExklMoms += timpenning;
+                    i++;
+                }
 
                 tbxFaktura.Text += kostnadExklMoms;
 
